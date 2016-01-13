@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<style>
+			h3 {font-family: "helvetica neue", sans-serif; font-weight: 200}
+			svg {margin:20px;border:1px solid black}
+			line{stroke:black;stroke-width:4px}
+			#fancy {stroke:red;stroke-width:6px;fill:pink;}
+		</style>
+		<script lang="javascript">
+			function wave(y){
+				document.getElementById("leftarm").setAttribute("y2", y);
+				document.getElementById("rightarm").setAttribute("y2", y);
+			}
+		</script>
+	</head>
+	<body>
+		<h3 >Magic circle demo</h3>
+		<svg>
+			<circle id="fancy" OnMouseOver="wave(80)" onmouseout="wave(100)" cx="50" cy="50" r="40"/>
+			<circle id="lefteye" cx="40" cy="40" r="7"/>
+			<circle id="righteye" cx="60" cy="40" r="7"/>
+			<line x1="50" x2="50" y1="93" y2="180" />
+			<line id="leftarm" x1="50" x2="100" y1="103" y2="100" />
+			<line id="rightarm" x1="50" x2="0" y1="103" y2="100" />
+		</svg>
+	</body>
+</html>
